@@ -20,10 +20,8 @@ from django.urls import path
 from testapp import views
 from django.conf import settings
 from django.conf.urls.static import static
-from django.urls import include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('store/', include('storee.urls')),  # This line includes storee app URLs
-    path('', include('testapp.urls')),  # assuming 'home' is here
+    path("admin/", admin.site.urls),
+    path('',views.home, name='home'),
 ]+ static (settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

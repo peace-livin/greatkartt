@@ -9,3 +9,4 @@ from . import views
 urlpatterns = [
     path('',views.store, name='store'),
 ]
+
